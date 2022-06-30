@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/kartikk221/zip-utils/issues"
   },
-  "homepage": "https://github.com/kartikk221/zip-utils#readme"
+  "homepage": "https://github.com/kartikk221/zip-utils#readme",
+  "dependencies": {
+    "event-stream": "^4.0.1",
+    "zlib": "^1.0.5"
+  }
 }
