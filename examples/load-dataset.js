@@ -19,9 +19,5 @@ const FilesToLoad = ['./data/US-EXPORTED'];
         console.log(`Loaded ${FilesToLoad[i]} in ${Date.now() - StartTime}ms`);
     }
 
-    console.log(`Loaded ${FilesToLoad.length} files in ${Date.now() - StartTime}ms`);
-
-    console.log(Dataset.zip_codes.size);
-    console.log(Dataset.zip_codes.get('10307').city_name);
-    console.log(Dataset.zip_codes.get('10312').state_name);
+    console.log(`Loaded ${Dataset.zip_codes.size} Zip Codes In ${Date.now() - StartTime}ms`);
 })();

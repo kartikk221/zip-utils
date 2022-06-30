@@ -26,8 +26,19 @@ FilesToLoad.forEach((path) => {
     content.split('\n').forEach((line) => {
         // Split the line into its components according to the format of our raw dataset
         const COLUMNS = line.split('\t');
-        let [COUNTRY_CODE, ZIP_CODE, CITY_NAME, STATE_NAME, STATE_CODE, COUNTY_NAME, COUNTY_CODE, LATITUDE, LONGITUDE] =
-            COLUMNS;
+        let [
+            COUNTRY_CODE,
+            ZIP_CODE,
+            CITY_NAME,
+            STATE_NAME,
+            STATE_CODE,
+            COUNTY_NAME,
+            COUNTY_CODE,
+            _,
+            __,
+            LATITUDE,
+            LONGITUDE,
+        ] = COLUMNS;
 
         // Do not proceed if the line is empty
         if (!ZIP_CODE) return;

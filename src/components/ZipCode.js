@@ -50,7 +50,7 @@ class ZipCode {
      * Provides a symbols array to be used for resolving index values.
      *
      * @private
-     * @param {Array<Array<String>>} symbols - The symbol set to use for resolving index values
+     * @param {Array<String>} symbols - The symbol set to use for resolving index values
      */
     _use_symbols(symbols) {
         this.#symbols = symbols;
