@@ -12,22 +12,26 @@
 </div>
 
 ## Motivation
-ZipUtils aims to provide a simple abstraction layer on the complicated processes of working with Zip Codes which are often contained in large dataset files.
-Easily build an efficiently compiled dataset from your own third party dataset for upmost efficiency in your Node.js applications.
+ZipUtils aims to provide a simple abstraction layer on the complicated and I/O intensive processes of working with zip codes which are often contained in large dataset files. 
 
-Some of the prominent features implemented are:
+Some of the prominent features are:
 - Memory & CPU Efficient
 - Asynchornous By Nature
 - Extremely Lightweight
 - Zero Dependencies
 - TypeScript Types Support
 
+## Installation
+```
+npm install zip-utils
+```
+
 ## Documentation
 - See [`> [Examples]`](./examples) for **Creating** and **Loading** large amounts of **Zip Codes** with ZipUtils.
 - See [`> [ZipDataset]`](./docs/ZipDataset.md) for working with **Datasets** in ZipUtils.
 - See [`> [ZipCode]`](./docs/ZipCode.md) for working with the each **Zip Code** in ZipUtils.
 
-Note! The example dataset was taken from [GeoNames](http://download.geonames.org/export/zip/) but you can compile any third party dataset into a ZipUtils optimized dataset for use in your applications.
+Note! The example dataset was taken from [GeoNames](http://download.geonames.org/export/zip/) but you can compile **any third party dataset** into a ZipUtils optimized dataset for use in your applications.
 
 ## License
 [MIT](./LICENSE)
