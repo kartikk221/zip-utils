@@ -89,5 +89,5 @@ FilesToLoad.forEach((path) => {
 console.log(`Processed ${FilesToLoad.length} files in ${Date.now() - StartTime}ms`);
 
 Dataset.export(PathToWrite).then(() =>
-    console.log(`Exported dataset to ${PathToWrite} in ${Date.now() - StartTime}ms`)
+    console.log(`Exported ${Dataset.zip_codes.size} Zip Codes To ${PathToWrite} In ${Date.now() - StartTime}ms`)
 );

@@ -1,6 +1,5 @@
 /**
- * This example file goes over creating your own dataset.
- * Note! This code is not optimized as it should only be ran once to create your exported dataset file.
+ * This example file goes over loading a previously exported dataset from ZipUtils.
  */
 
 const ZipUtils = require('../index.js');

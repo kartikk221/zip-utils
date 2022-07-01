@@ -1,33 +1,30 @@
 {
-  "name": "zip-utils",
-  "version": "1.0.0",
-  "description": "A simple package to work with zip codes in various supported countries around the world.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kartikk221/zip-utils.git"
-  },
-  "keywords": [
-    "zip",
-    "code",
-    "utilities",
-    "distance",
-    "miles",
-    "kilometers",
-    "postal",
-    "codes"
-  ],
-  "author": "kartikk221",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kartikk221/zip-utils/issues"
-  },
-  "homepage": "https://github.com/kartikk221/zip-utils#readme",
-  "dependencies": {
-    "event-stream": "^4.0.1",
-    "zlib": "^1.0.5"
-  }
+    "name": "zip-utils",
+    "version": "1.0.0",
+    "description": "A simple package to work with zip codes in various supported countries around the world.",
+    "main": "index.js",
+    "types": "./types/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kartikk221/zip-utils.git"
+    },
+    "keywords": [
+        "zip",
+        "postal",
+        "code",
+        "codes",
+        "utilities"
+    ],
+    "author": "kartikk221",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kartikk221/zip-utils/issues"
+    },
+    "homepage": "https://github.com/kartikk221/zip-utils#readme",
+    "devDependencies": {
+        "typescript": "^4.4.4"
+    }
 }

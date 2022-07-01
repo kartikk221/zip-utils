@@ -3,7 +3,7 @@ const zlib = require('zlib');
 const stream = require('stream'); // lgtm [js/unused-local-variable]
 
 const ZipCode = require('./ZipCode.js');
-const { to_compressed_symbol, stream_each_line, haversine_distance } = require('../shared/operators.js');
+const { to_compressed_symbol, stream_each_line } = require('../shared/operators.js');
 
 class ZipDataset {
     #symbols = [];
@@ -12,7 +12,6 @@ class ZipDataset {
 
     /**
      * Initializes a new zip codes dataset instance.
-     * Note: You may provide your own parser if your dataset is not in the default format.
      *
      * @param {Object} options
      * @param {String} options.delimiter - The delimiter to use when parsing the dataset. Defaults to '\t'
@@ -157,7 +156,7 @@ class ZipDataset {
         return new Promise((resolve) => {
             // Initialize the symbols map and lines array to hold output dataset structure
             let lines = [
-                [], // This will hold the symbols
+                [''], // This will hold the symbols - the first empty line represents undefined values
             ];
 
             // Helper function to convert a string to a compressed symbol index
@@ -226,22 +225,6 @@ class ZipDataset {
             // When the writable stream is finished, resolve the promise
             writable.once('finish', resolve);
         });
-    }
-
-    /**
-     * Calculates and returns the distance between the given zip codes in miles.
-     *
-     * @param {ZipCode} from
-     * @param {ZipCode} to
-     * @param {('M','N','K')=} units M = miles, N = nautical miles, K = kilometers
-     */
-    distance(from, to, units = 'M') {
-        // Ensure both from and to are instances of ZipCode
-        if (!(from instanceof ZipCode) || !(to instanceof ZipCode))
-            throw new Error('from and to must be instances of ZipCode');
-
-        // Calculate the distance between the two zip codes in miles
-        return haversine_distance(from.latitude, from.longitude, to.latitude, to.longitude, units);
     }
 
     /* ZipDataset Getters */
