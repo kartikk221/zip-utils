@@ -1,7 +1,7 @@
 {
     "name": "zip-utils",
     "version": "1.0.0",
-    "description": "A simple package to work with zip codes in various supported countries around the world.",
+    "description": "A simple package to work with large amounts of zip codes from any country in the world.",
     "main": "index.js",
     "types": "./types/index.d.ts",
     "scripts": {

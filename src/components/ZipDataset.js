@@ -32,8 +32,8 @@ class ZipDataset {
      * Note! This method will automatically compress various fields into symbolized indices for effiency.
      *
      * @param {String} zip
-     * @param {Number} latitude
-     * @param {Number} longitude
+     * @param {Number=} latitude
+     * @param {Number=} longitude
      * @param {String=} country_code
      * @param {String=} city_name
      * @param {String=} state_name
@@ -43,8 +43,8 @@ class ZipDataset {
      */
     add(
         zip,
-        latitude,
-        longitude,
+        latitude = 0,
+        longitude = 0,
         country_code = '',
         city_name = '',
         state_name = '',
@@ -52,6 +52,9 @@ class ZipDataset {
         county_name = '',
         county_code = ''
     ) {
+        // Throw an error if zip code is not a string
+        if (!zip || typeof zip !== 'string') throw new Error('ZipDataset.add(zip, ...) -> zip must be a valid string');
+
         // Create a new zip code instance which stores raw string values
         const instance = new ZipCode(
             zip,

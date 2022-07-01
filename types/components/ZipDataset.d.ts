@@ -40,14 +40,14 @@ export class ZipDataset {
      */
     add(
         zip: string,
-        latitude: number,
-        longitude: number,
-        country_code = '',
-        city_name = '',
-        state_name = '',
-        state_code = '',
-        county_name = '',
-        county_code = ''
+        latitude?: number,
+        longitude?: number,
+        country_code?: string,
+        city_name?: string,
+        state_name?: string,
+        state_code?: string,
+        county_name?: string,
+        county_code?: string
     ): void;
 
     /**
